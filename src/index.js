@@ -59,7 +59,7 @@ module.exports = (options) => {
               result.warn("Invalid value definition: " + atRule.params);
             }
 
-            let [, key, value] = `${atRule.params}${atRule.raws.between}`.match(
+            let [, key, value] = `${atRule.params}${atRule.raws.between || ""}`.match(
               matchValueDefinition
             );
 
